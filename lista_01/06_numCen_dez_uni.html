@@ -16,8 +16,12 @@
 
     //PROCESSAMENTO
 
-    
+    let centena = Math.floor(num / 100);
+    let dezena = Math.floor((num % 100) / 10);
+    let unidade = num % 10
     
     //SAÍDA
+
+    document.write("Você tem " + centena + " centenas, " + dezena + " dezenas e " + unidade + " unidades.");
 
 </script>
