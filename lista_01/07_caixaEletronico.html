@@ -22,10 +22,21 @@
     let n10 = Math.floor(((saque % 100) % 50) / 10);
     let n5 = Math.floor((((saque % 100) % 50) % 10) / 5);
     let n1 = Math.floor((((saque % 100) % 50) % 10) % 5);
-    
+    }
     //SAÍDA
 
-    document.write("Notas de 100: " + n100 + ", notas de 50: " + n50 + ", notas de 10: " + n10 + ", notas de 5: " + n5 + " e moedas de 1: " + n1 + ".");
-    }
+        let mensagemFinal = " "
+        if (n100 > 0) {
+            mensagemFinal = (n100 + " nota de cem");
+            if (n100 > 1) {
+                mensagemFinal = (n100 + " notas de cem");
+            }
+        } 
+        if (n50 > 0) {
+            mensagemFinal = mensagemFinal + ", " + n50 + " nota de 50";
+            if (n50 > 1) {
+                
+            }
+        }        
 
 </script>
