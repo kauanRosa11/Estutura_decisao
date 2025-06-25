@@ -9,10 +9,20 @@
     
     //Entrada
 
+    let precoProduto = Number(prompt(`Qual o preço do produto`));
 
     //Processamento
 
+    let precoFinal;
+    (precoProduto <= 280) ? precoFinal = precoProduto * 1.2
+    : (precoProduto > 280 && precoProduto <= 700) ? precoFinal = precoProduto * 1.15 
+    : (precoProduto > 700 && precoProduto <= 1500) ? precoFinal = precoProduto * 1.1 
+    : (precoProduto > 1500) ? precoFinal = precoProduto * 1.05 
+    : precoFinal = `erro! Bote um número!`;
+
     
     //Saída
+
+    (precoFinal === `erro! Bote um número!`) ? document.write(precoFinal) : document.write(`O preço final do produto é de R$ ${precoFinal.toFixed(2)}`);
 
 </script>

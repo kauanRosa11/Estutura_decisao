@@ -5,10 +5,18 @@
 
     //Entrada
 
+    let anonasc = Number(prompt(`Qual seu ano de nascimento?`));
 
     //Processamento
 
+    let mensagemFinal = ``;
+
+    (anonasc > 2009) ? mensagemFinal = `Não pode votar` 
+    : (anonasc <= 2009) ? mensagemFinal = `Você pode votar` 
+    : mensagemFinal = `Valor inválido`;
 
     //Saída
+
+    document.write(mensagemFinal);
 
 </script>
