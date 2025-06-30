@@ -11,10 +11,15 @@
 
     //Entrada
 
+    let nota = Number(prompt(`Qual foi a nota que você tirou`));
 
     //Processamento
 
+    let conceito; 
+    (nota >= 9 && nota <= 10) ? conceito = `A` : (nota >= 8) ? conceito = `B` : (nota >= 7) ? conceito = `C` : (nota >= 6) ? conceito = `D` : (nota >= 0) ? conceito = `E` : alert(`Erro`);  
     
     //Saída
+
+    document.write(`A sua nota (${nota}) é o mesmo que o conceito "${conceito}"`);
 
 </script>
