@@ -9,10 +9,16 @@
 
     //Entrada
 
+    let horasTrabalhadas = Number(prompt(`Quantas horas você trabalha semanalmente?`));
+    let valorHora = Number(prompt(`Qual o valor da hora trabalhada?`));
 
     //Processamento
 
+    let salarioFinal;
+    (horasTrabalhadas <= 45) ? salarioFinal = horasTrabalhadas * valorHora : (horasTrabalhadas <= 60) ? salarioFinal = (horasTrabalhadas * valorHora) * 1.20 : (horasTrabalhadas > 60) ? salarioFinal = (horasTrabalhadas * valorHora) * 1.30 : alert(`Erro!`);
     
     //Saída
+
+    document.write(`O salário final será de R$${salarioFinal}.`);
 
 </script>

@@ -11,10 +11,22 @@
 
     //Entrada
 
+    let contaAgua = Number(prompt(`Quanto custa a sua conta da água?`));
+    let contaEnergia = Number(prompt(`Quanto custa a sua conta de energia?`));
+    let contaTelefone = Number(prompt(`Quanto custa a sua conta de telefone?`));
+    let contaSupermercado = Number(prompt(`Quanto custa a sua conta do supermercado?`));
+    let salario = Number(prompt(`Qual seu salário`));
 
     //Processamento
 
+    let valorTotalContas = contaAgua + contaEnergia + contaTelefone + contaSupermercado;
+    let calculo1 = (valorTotalContas - salario);
+    let calculo2 = (salario - valorTotalContas);
+    let mensagemFinal;
+    (salario >= valorTotalContas) ?  mensagemFinal = `Você pode pagar todas suas contas e sobrará R$${calculo2}.` : (salario < valorTotalContas) ? mensagemFinal = `Você não pode pagar suas contas, faltam R$${calculo1}.` : mensagemFinal = `Erro! Verifique se dijitou tudo certo.`;
     
     //Saída
     
+    document.write(mensagemFinal);
+
 </script>
