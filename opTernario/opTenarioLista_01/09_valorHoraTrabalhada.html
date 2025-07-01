@@ -15,7 +15,10 @@
     //Processamento
 
     let salarioFinal;
-    (horasTrabalhadas <= 45) ? salarioFinal = horasTrabalhadas * valorHora : (horasTrabalhadas <= 60) ? salarioFinal = (horasTrabalhadas * valorHora) * 1.20 : (horasTrabalhadas > 60) ? salarioFinal = (horasTrabalhadas * valorHora) * 1.30 : alert(`Erro!`);
+    (horasTrabalhadas <= 45) ? salarioFinal = horasTrabalhadas * valorHora 
+    : (horasTrabalhadas <= 60) ? salarioFinal = (horasTrabalhadas * valorHora) * 1.20 
+    : (horasTrabalhadas > 60) ? salarioFinal = (horasTrabalhadas * valorHora) * 1.30 
+    : alert(`Erro!`);
     
     //Saída
 

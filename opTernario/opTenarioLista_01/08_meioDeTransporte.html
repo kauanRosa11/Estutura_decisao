@@ -15,7 +15,9 @@
 
     let mensagemFinal;
     let valorCarro = precoLitro * quantidadeLitros;
-    (valorCarro > transportePublico) ? mensagemFinal = `Ir de transporte público seria o mais barato para ir ao trabalho` : (valorCarro < transportePublico) ? mensagemFinal = `O mais barato seria ir de carro ao trabalho` : mensagemFinal = `Erro! Verifique se digitou corretamente.`;
+    (valorCarro > transportePublico) ? mensagemFinal = `Ir de transporte público seria o mais barato para ir ao trabalho` 
+    : (valorCarro < transportePublico) ? mensagemFinal = `O mais barato seria ir de carro ao trabalho` 
+    : mensagemFinal = `Erro! Verifique se digitou corretamente.`;
     
     //Saída
 

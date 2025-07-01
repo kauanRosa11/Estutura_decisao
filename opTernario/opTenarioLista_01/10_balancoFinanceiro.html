@@ -23,7 +23,9 @@
     let calculo1 = (valorTotalContas - salario);
     let calculo2 = (salario - valorTotalContas);
     let mensagemFinal;
-    (salario >= valorTotalContas) ?  mensagemFinal = `Você pode pagar todas suas contas e sobrará R$${calculo2}.` : (salario < valorTotalContas) ? mensagemFinal = `Você não pode pagar suas contas, faltam R$${calculo1}.` : mensagemFinal = `Erro! Verifique se dijitou tudo certo.`;
+    (salario >= valorTotalContas) ?  mensagemFinal = `Você pode pagar todas suas contas e sobrará R$${calculo2}.` 
+    : (salario < valorTotalContas) ? mensagemFinal = `Você não pode pagar suas contas, faltam R$${calculo1}.` 
+    : mensagemFinal = `Erro! Verifique se dijitou tudo certo.`;
     
     //Saída
     
