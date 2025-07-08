@@ -21,7 +21,7 @@
     let parcela = valorImovel / (anos * 12);
     if (parcela > (salario * 0.3)) {
         mensagemFinal = `A parcela ficou R$${parcela}, então o financiamento não foi concedido`;
-    } else if (parcela < (salario * 0.3)) {
+    } else if (parcela <= (salario * 0.3)) {
         mensagemFinal = `A parcela ficou R$${parcela}, então o financiamento foi concedido`;      
     } else {
         mensagemFinal = `Valores inválidos`;
