@@ -13,9 +13,9 @@
     */
 
     //ENTRADA
-    
+
     let turno = prompt(`Qual turno que você estuda? Use M - matutino, V - vespertino e N - noturno`).toUpperCase();
-    
+
     //PROCESSAMENTO
 
     let mensagemFinal
@@ -28,12 +28,12 @@
             break;
         case `N`:
             mensagemFinal = `Boa noite!`;
-            break;    
+            break;
         default:
             mensagemFinal = `Valor inválido!`;
             break;
     }
-    
+
     //SAÍDA
 
     document.write(mensagemFinal);

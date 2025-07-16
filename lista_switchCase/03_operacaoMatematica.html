@@ -11,8 +11,8 @@
     //ENTRADA
 
     let num1 = Number(prompt(`Informe o primeiro número:`));
-    let num2 = Number(prompt(`Informe o segundo número:`));
     let operacao = prompt(`Qual a operação que deseja fezer? Use "+" para somar, "-" para subtrair, "*" para multiplicar e "/" para dividir`);
+    let num2 = Number(prompt(`Informe o segundo número:`));
 
     //PROCESSAMENTO
 
@@ -21,41 +21,43 @@
     let positivoOuNegativo;
     let inteiroOuDecimal;
     let mensagemFinal;
- 
+
     switch (operacao) {
-        case `+`: 
+        case `+`:
             resultado = num1 + num2;
             break;
         case `-`:
             resultado = num1 - num2;
             break;
-        case `*`: 
+        case `*`:
             resultado = num1 * num2;
             break;
         case `/`:
-            switch (num2 == 0) {
-                case 1:
-                    alert(`Erro! Não é possível dividir algum número por 0.`);
+            switch (num2) {
+                case 0:
+                    mensagemFinal = `Erro! Não é possível dividir algum número por 0.`;
                     break;
                 default:
                     resultado = num1 / num2;
                     break;
             }
-            default: 
-                alert(`Operação não existente!`);
+            break;
+        default:
+            alert(`Operação não existente!`);
+            break;
     }
 
-    switch ((resultado % 2) == 0) {
-        case 1: 
+    switch (resultado % 2) {
+        case 0:
             imparOuPar = `par`;
             break;
-        default: 
+        default:
             imparOuPar = `ímpar`;
             break;
     }
-    
+
     switch (resultado >= 0) {
-        case 1:
+        case true:
             positivoOuNegativo = `positivo`;
             break;
         default:
@@ -64,7 +66,7 @@
     }
 
     switch ((resultado % 1) == 0) {
-        case 1:
+        case true:
             inteiroOuDecimal = `inteiro`;
             break;
         default:
@@ -74,14 +76,16 @@
 
     //SAÍDA
 
-    document.write(`O resultado da operação deu: ${resultado}, este número é ${imparOuPar}, ele é ${positivoOuNegativo} e ${inteiroOuDecimal}`);
-
-
-/*
-    switch (num2 !== 0 && operacao == `+` || operacao == `-` || operacao == `*` || operacao == `/`) {
-        case 1:
-            document.write(mensagemFinal);
+    switch (mensagemFinal == `Erro! Não é possível dividir algum número por 0.`) {
+        case true:
+            alert(`Erro! Não é possível dividir algum número por 0.`);
+            break;
+        default:
+            switch (operacao == `+` || operacao == `-` || operacao == `*` || operacao == `/`) {
+                case true:
+                    document.write(`O resultado da operação deu: ${resultado}, este número é ${imparOuPar}, ele é ${positivoOuNegativo} e ${inteiroOuDecimal}`);
+                    break;
+            }
             break;
     }
-*/
 </script>
